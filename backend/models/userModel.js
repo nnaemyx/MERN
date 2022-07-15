@@ -14,11 +14,8 @@ const userSchema = mongoose.Schema({
         type: String,
         required: [true, 'Please add a password']
     },
-    location: {
-        type: String,
-        required: [true, 'Please add your location']
-    },
-},{
+},
+{
     timestamps: true,
 })
 
