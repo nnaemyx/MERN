@@ -18,7 +18,7 @@ const protect = asyncHandler(async(req, res, next) => {
             // Get user from the token
 
             req.user = await User.findById(decoded.id).select('-password')
-            next()
+      
         } catch (error) {
             console.log(error)
             res.send(401)
@@ -26,10 +26,7 @@ const protect = asyncHandler(async(req, res, next) => {
         }
     }
 
-    if(!token) {
-        res.send(401)
-        throw new Error('Not authorised, no token')
-    }
+   
 })
 
 module.exports = {protect}
