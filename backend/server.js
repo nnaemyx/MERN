@@ -9,6 +9,8 @@ const app = express()
 
 connectDB()
 
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
