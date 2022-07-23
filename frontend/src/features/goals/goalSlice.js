@@ -6,7 +6,7 @@ const initialState = {
     isError: false,
     isSuccess: false,
     isLoading:false,
-    message:''
+    message:'',
 }
 
 // create new goal
@@ -49,7 +49,7 @@ export const goalSlice = createSlice  ({
     name:'goal',
     initialState,
     reducers: {
-        reset: (state) => initialState
+        reset: (state) => initialState,
     },
     extraReducers: (builder) => {
         builder
