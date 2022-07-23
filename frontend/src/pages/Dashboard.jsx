@@ -16,7 +16,7 @@ function Dashboard() {
     (state) => state.goals
   )
 
-  useEffect(() => {
+  if((user) => {
     if (isError) {
       console.log(message)
     }
