@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === 'production') {
  
 }else {
     app.get('/', (req, res) => res.send('Please set to production'));
-} 
+     } 
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
@@ -31,3 +31,4 @@ app.use('/api/users', require('./routes/userRoutes'))
 
 app.use(errorHandler)
 
+app.listen(port, () => console.log(`server started on ${port}`))
