@@ -27,7 +27,6 @@
   },
   "engines": {
     "node": "16.15.0"
-  },
-  "proxy": "true"
+  }
 }
 
